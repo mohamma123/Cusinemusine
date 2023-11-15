@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>👩‍🍳 Recipe Master Deluxe - Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="start-countdown"></div>
+        <h1 id="food-title">👩‍🍳 Recipe Master Pro</h1>
+        <div id="timer">Time: <span id="time">30</span> seconds</div>
+        <div id="score">Score: <span id="score-value">0</span></div>
+    
+        <div id="ingredients-container"></div>
+    
+        <button id="submit-btn" onclick="submitGuess()">Submit</button>
+        <button id="hint-btn" onclick="getHint()">Hint</button>
+    
+        <div id="dark-mode-toggle">
+          🌙 Dark Mode
+          <label class="switch" for="dark-mode-checkbox">
+            <input type="checkbox" id="dark-mode-checkbox" onclick="toggleDarkMode()">
+            <span class="slider"></span>
+          </label>
+        </div>
+    
+        <div id="progress-bar-container">
+          <div id="progress-bar">
+            <div id="progress-bar-inner"></div>
+          </div>
+        </div>
+    
+        <div id="combo-container">Combo: <span id="combo">0</span></div>
+        <div id="difficulty-level">Difficulty: <span id="difficulty">1</span></div>
+    
+        <div id="game-over-message"></div>
+    
+        <div id="hint-history">
+          <h2>Hint History</h2>
+          <ul id="hint-list"></ul>
+        </div>
+    
+        <button id="skip-btn" onclick="skipRound()">Skip Round</button>
+    
+        <div id="power-ups">
+          <h2>Power-Ups</h2>
+          <button class="power-up" onclick="applyPowerUp('time')">+5s Time</button>
+          <button class="power-up" onclick="applyPowerUp('score')">Double Score</button>
+          <button class="power-up" onclick="applyPowerUp('hint')">Free Hint</button>
+        </div>
+      </div>
+    
+      <script src="script.js"></script>
+</body>
+</html>
